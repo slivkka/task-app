@@ -1,0 +1,10 @@
+.venv
+/env
+/venv
+
+init
+
+__pycache__/
+*.py[cod]
+
+.env
