@@ -11,10 +11,8 @@ from src.app.services.users import ph
 class Authentification:
     @classmethod
     async def check_access_token(cls, token):
-        try:
-            decode_token(token)
-        finally:
-            return {"message": "access granted"}
+        decode_token(token)
+        return {"message": "access granted"}
 
     @classmethod
     async def check_refresh_token(cls, refresh_token):

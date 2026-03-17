@@ -14,7 +14,6 @@ routers = [tasks_router, users_router]
 for router in routers:
     app.include_router(router)
 
-
 register_tortoise(
     app,
     config=TORTOISE_ORM
