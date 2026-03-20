@@ -15,7 +15,7 @@ def create_token(user_id, username):
     payload = {
         "user_id": user_id,
         "username": username,
-        "exp": datetime.utcnow() + timedelta(minutes=1),
+        "exp": datetime.utcnow() + timedelta(minutes=10),
         "type": "access"
     }
 

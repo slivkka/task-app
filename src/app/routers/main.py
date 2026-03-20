@@ -31,6 +31,7 @@ async def complete_task_(task_id: int):
     return await complete_task(task_id)
 
 @router.delete("/tasks/{task_id}")
-async def delete_task_(task_id: int):
-    return await delete_task(task_id)
+async def delete_task_(task_id: int,
+                       current_user: User = Depends(get_current_user)):
+    return await delete_task(task_id, current_user)
 
